@@ -11,6 +11,8 @@ public class arrayReverseRotateShit
     }
     
     public static void rotateArray(int[] arr, int k){
+        if(arr==null || arr.length==0)
+            return;
         int n = arr.length;
         k = k%n;
         if(k<0)
