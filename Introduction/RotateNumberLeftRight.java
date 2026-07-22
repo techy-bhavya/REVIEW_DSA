@@ -19,9 +19,9 @@ public class RotateNumberLeftRight
         int divisor = (int)Math.pow(10,len-k); //1000
         int multiplier = (int)Math.pow(10,k); //100
         
-        int rem = n%divisor;
-        int quot = n/divisor;
-        int ans = rem * multiplier + quot;
+        int firstPart = n%divisor;
+        int remainingPart = n/divisor;
+        int ans = firstPart * multiplier + remainingPart;
         System.out.println(ans);
     }
     
@@ -44,9 +44,9 @@ public class RotateNumberLeftRight
         int divisor = (int)Math.pow(10,k); //100
         int multiplier = (int)Math.pow(10,len-k); //1000
         
-        int rem = n%divisor;
-        int quot = n/divisor;
-        int ans = rem * multiplier + quot;
+        int lastPart = n%divisor;
+        int remainingPart = n/divisor;
+        int ans = lastPart * multiplier + remainingPart;
         System.out.println(ans);
     }
     
