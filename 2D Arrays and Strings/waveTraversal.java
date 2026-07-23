@@ -1,6 +1,6 @@
 public class waveTraversal
 {
-    public static void printwaveTraversal(int[][] mat){
+    public static void printWaveTraversal(int[][] mat){
         int n = mat.length;
         int m = mat[0].length;
         
@@ -36,6 +36,6 @@ public class waveTraversal
                           //0 1 0 0 1 
                           //0 0 1 1 0 
                           //1 0 0 0 0 
-		printwaveTraversal(matrix);
+		printWaveTraversal(matrix);
 	}
 }

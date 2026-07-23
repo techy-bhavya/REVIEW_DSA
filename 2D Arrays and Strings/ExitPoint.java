@@ -35,10 +35,10 @@ public class ExitPoint
         else if(dir==1){//row==n
             row--;
         }
-        else if(dir==2){//col==-1
+        else if(dir==2){//col<0
             col++;
         }
-        else{//row==-1
+        else{//row<0
             row++;
         }
         List<Integer> al = new ArrayList<>();
