@@ -1,6 +1,8 @@
+import java.util.*;
+
 public class ExitPoint
 {
-    public static void printExitPoint(int[][] mat){
+    public static List<Integer> printExitPoint(int[][] mat){
         int n = mat.length;
         int m = mat[0].length;
         
@@ -10,6 +12,7 @@ public class ExitPoint
         while(row>=0 && row<n && col>=0 && col<m){
             if(mat[row][col]==1){
                 dir = (dir+1)%4;
+                mat[row][col]=0; // Mark the cell as 0 to avoid infinite loop
             }
             if(dir==0){
                 col++;
@@ -25,20 +28,23 @@ public class ExitPoint
             }
         }
         
-        //Return to last valid cell
-        if(dir==0){
+        //Return to last valid cell: in comments: simpler conditions
+        if(dir==0){ //col==n
             col--;
         }
-        else if(dir==1){
+        else if(dir==1){//row==n
             row--;
         }
-        else if(dir==2){
+        else if(dir==2){//col==-1
             col++;
         }
-        else{
+        else{//row==-1
             row++;
         }
-        System.out.print("Exit Point: "+row +", "+col);
+        List<Integer> al = new ArrayList<>();
+        al.add(row);
+        al.add(col);
+        return al;
     }
     
     
@@ -48,6 +54,6 @@ public class ExitPoint
 		                  {1,0,1,0,1,0},
 		                  {0,1,0,1,1,0},
 		                  {0,0,0,0,0,1}};
-		printExitPoint(matrix);
+		System.out.println(printExitPoint(matrix));
 	}
 }
