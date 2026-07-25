@@ -16,12 +16,6 @@ public class rotate90CW
         }
     }
     
-    public static void swapValuesof2Darray(int[][] matrix, int i, int j){
-        int temp = matrix[i][j];
-        matrix[i][j] = matrix[j][i];
-        matrix[j][i] = temp;
-    }
-    
     public static void reverseEveryRow(int[][] matrix){
         int n = matrix.length;
         
@@ -29,6 +23,12 @@ public class rotate90CW
             int[] row = matrix[i];
             reverseArray(row);
         }
+    }
+
+    public static void swapValuesof2Darray(int[][] matrix, int i, int j){
+        int temp = matrix[i][j];
+        matrix[i][j] = matrix[j][i];
+        matrix[j][i] = temp;
     }
     
     public static void transpose(int[][] matrix){
