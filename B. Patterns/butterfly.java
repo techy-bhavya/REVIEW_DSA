@@ -2,6 +2,15 @@ import java.util.*;
 
 public class butterfly {
 
+/*
+n = 5
+*   *
+** **
+*****
+** **
+*   *
+*/
+
     public static void printPattern(int n){
         int stars = 1;
         int sp = n-2;
@@ -57,3 +66,4 @@ public class butterfly {
         sc.close();
     }
 }
+
